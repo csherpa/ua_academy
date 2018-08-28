@@ -3,7 +3,6 @@ class StudentsController < ApplicationController
         @students = Student.all
     end
 
-
     def new
         @student = Student.new
     end
@@ -31,6 +30,6 @@ class StudentsController < ApplicationController
     private
 
     def student_params
-        params.require(:student).permit(:firstname, :lastname, :cohort_id)
+        params.require(:student).permit(:image_url, :firstname, :lastname, :quirk, :cohort_id)
     end
 end
