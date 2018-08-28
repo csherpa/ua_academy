@@ -1,0 +1,18 @@
+
+<table class="table table-striped table-dark">
+<thead class="thead-dark">
+  <tr>
+    <th>Name</th>
+    <th>Cohort Id</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= @student.firstname %> <%= @student.lastname %></td>
+    <td>Cohort id: <%= @student.cohort_id %></td>  
+  </tr>
+</tbody>
+</table>
+<%= link_to "Edit", edit_student_path(@student) %>
+
+
