@@ -1,0 +1,10 @@
+<%= form_for(@cohort) do |f| %>
+      <ul>
+            <li><%= f.label :title %></li>
+            <li><%= f.text_field :title %></li>
+
+            <li><%= f.label :description %></li>
+            <li><%= f.text_field :description %></li>
+            <%= f.submit "Update", :class => "btn" %>
+      </ul>
+ <% end %>

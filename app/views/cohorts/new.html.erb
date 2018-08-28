@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <%= form_with model: Cohort.new do |form| %>
+
+                <td><%= form.label :title%>
+                <%= form.text_field :title, placeholder: "Enter Title"%></td>
+
+                <td><%= form.label :description%>
+                <%= form.text_field :description, placeholder: "Enter Description"%></td>
+                
+                <td><%= form.submit 'Submit' %></td>
+            <% end %>
+        </tr>
+    </thead>
+</table>
