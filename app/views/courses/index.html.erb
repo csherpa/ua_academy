@@ -1,0 +1,24 @@
+<table class="table table-striped table-dark">
+  <thead class="thead">
+    <tr>
+    <form>
+      <th scope="col">Title</th>
+      <th scope='col'>Course Id</th>
+    </form>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr> 
+      <form>
+        <% @courses.each do |single_course| %>
+            <td> <%=single_course.title%></td> 
+            <td class="nav-link"><%= single_course.id %></td>  
+            <td><%= link_to "Edit", edit_course_path(single_course) %></td>
+            <%# <td><%= link_to "Create", new_student_path(single_student)%>
+             </tr> 
+          <% end %>
+      </form>
+  </tbody>
+</table>
+
