@@ -6,12 +6,6 @@ class CohortsController < ApplicationController
     def new
         @cohort = Cohort.new
     end
-
-    # def create
-    #     Cohort.create(cohort_params)
-    #     redirect_to new_cohort_path
-    # end
-
     def create 
         @cohort = Cohort.new(cohort_params)
         @cohort.save

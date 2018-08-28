@@ -1,5 +1,4 @@
 class InstructorsController < ApplicationController
-<<<<<<< HEAD
 def index
     @instructors = Instructor.all
 end
@@ -16,7 +15,6 @@ end
 
 def show
     @instructor = Instructor.find(params[:id])
-    # @cohorts = @instructor.cohorts 
 end 
 
 def edit 
@@ -34,7 +32,5 @@ private
 def instructor_params
     params.require(:instructor).permit(:image_url, :firstname, :lastname, :postion, :string)
 end
-=======
 
->>>>>>> controller
 end
