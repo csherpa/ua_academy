@@ -3,12 +3,13 @@
 <thead class="thead-dark">
   <tr>
     <th>Name</th>
+    <th>Quirk</th>
     <th>Cohort Id</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td><%= @student.firstname %> <%= @student.lastname %></td>
+    <td><%= @student.firstname %> <%= @student.lastname %><%= @student.quirk %></td>
     <td>Cohort id: <%= @student.cohort_id %></td>  
   </tr>
 </tbody>

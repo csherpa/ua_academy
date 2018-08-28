@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <%= form_with model: Instructor.new do |form| %>
+            <td><%= form.label :firstname%>
+            <%= form.text_field :firstname, placeholder: "Enter First Name"%></td>
+
+            <td><%= form.label :lastname %>
+            <%= form.text_field :lastname, placeholder: "Enter Last Name"%></td>
+
+            <td><%= form.label :position %>
+            <%= form.text_field :position: "Enter the position"%></td>
+
+            <td><%= form.label :quirk %>
+            <%= form.text_field :quirk: "Enter your quirk"%></td>
+            
+            <td><%= form.submit "Submit" %></td>
+        <% end %>
+        </tr>
+    </thead>
+</table>
