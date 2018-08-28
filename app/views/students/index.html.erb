@@ -14,7 +14,7 @@
           <tr> 
           <% @students.each do |single_student| %>
             <td> <%=single_student.firstname%></td>
-            <td class="nav-link"><%= single_student.lastname %></td>
+            <td><%= single_student.lastname %></td>
             <td><%= single_student.quirk%></td>
             <td><%= single_student.cohort_id %></td>   
             <td><%= link_to "Edit", edit_student_path(single_student) %></td>   
