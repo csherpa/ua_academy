@@ -15,7 +15,6 @@ class InstructorsController < ApplicationController
 
     def show
         @instructor = Instructor.find(params[:id])
-        # @cohorts = @instructor.cohorts 
     end 
 
     def edit 
