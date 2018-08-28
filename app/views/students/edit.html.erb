@@ -1,0 +1,17 @@
+<%= form_for(@student) do |f| %>
+      <ul>
+            <li><%= f.label :firstname %></li>
+            <li><%= f.text_field :firstname, value: @student.firstname %></li>
+
+            <li><%= f.label :lastname %></li>
+            <li><%= f.text_field :lastname, value: @student.lastname %></li>
+      
+            <li><%= f.label :cohort_id %></li>
+            <li><%= f.text_field :cohort_id, value: @student.cohort_id%> </li>
+
+            <%= f.submit "Update", :class => "btn" %>
+      </ul>
+ <% end %> 
+
+
+ 
