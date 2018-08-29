@@ -27,10 +27,16 @@ def edit
     redirect_to '/instructors'
 end
 
+def destroy
+    @instructor = Student.find(params[:id])
+    @instructor.delete
+    redirect_to '/students'
+end
+
 private
 
 def instructor_params
-    params.require(:instructor).permit(:image_url, :firstname, :lastname, :postion, :string)
+    params.require(:instructor).permit(:image_url, :firstname, :lastname, :postion, :quirk)
 end
 
 end

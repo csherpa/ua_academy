@@ -1,5 +1,6 @@
-<table class="table table-striped table-dark">
-  <thead class="thead">
+<h1>Cohorts</h1>
+<table>
+  <thead>
     <tr>
     <form>
       <th scope="col">Title</th>
@@ -8,15 +9,20 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id='my-cohorts'>
     <tr> 
       <form>
         <% @cohorts.each do |single_cohort| %>
             <td> <%= single_cohort.title %> </td>
             <td> <%= single_cohort.description %> </td>
-            <td><%= link_to "Edit", edit_cohort_path(single_cohort)%></td>
         </tr>
         <% end %>
     </form>
     </tbody>
 </table>
+
+<br>
+
+<td><%= link_to 'New Cohort', new_cohort_path, remote: true, id: 'ajaxcall'%></td>
+
+<div id=></div>

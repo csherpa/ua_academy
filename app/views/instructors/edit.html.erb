@@ -1,4 +1,4 @@
-<%= form_for (@instructor) do |f| %>
+<%= form_for(@instructor) do |f| %>
       <ul>
       <li><%= f.label :firstname%></li>
       <li><%= f.text_field :firstname, value: @instructor.firstname%></li>
@@ -9,7 +9,7 @@
       <li><%= f.label :postion%></li>
       <li><%= f.text_field :postion%><li>
 
-      <li><%= f.label :qurik%></li>
+      <li><%= f.label :quirk%></li>
       <li><%= f.text_field :quirk%><li>
 
       <%= f.submit "Update", :class => "btn" %>     
