@@ -1,9 +1,7 @@
 class StudentsController < ApplicationController
 
-    before_action :current_student, only: [:destroy]
-    def current_student
-        @current_student = Student.find_by_id!(params[:id])
-    end
+    # before_action :current_student, only: [:destroy]
+    
     # helper_method :current_student
 
     def index
@@ -41,6 +39,9 @@ class StudentsController < ApplicationController
     end
 
     private
+    # def current_student
+    #     @current_student = Student.find(params[:id])
+    # end
 
     def student_params
         params.require(:student).permit(:image_url, :firstname, :lastname, :quirk, :cohort_id)

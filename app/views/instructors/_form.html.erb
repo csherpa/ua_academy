@@ -1,0 +1,17 @@
+<%= form_for @instructor, remote: true do |f| %>
+      
+      <div><%= f.label :firstname%></div>
+      <div><%= f.text_field :firstname, id: :instructor_firstname, placeholder: 'Enter First Name'%></div>
+
+      <div><%= f.label :lastname%></div>
+      <div><%= f.text_field :lastname, id: :instructor_lastname, placeholder: 'Enter Last Name' %></div>
+
+      <div><%= f.label :postion%></div>
+      <div><%= f.text_field :postion, id: :instructor_postion, placeholder: 'Enter position '%><div>
+
+      <div><%= f.label :quirk%></div>
+      <div><%= f.text_field :quirk, id: :insturctor_quirk, placeholder: 'Enter your quirk'%><div>
+
+      <%= f.submit "Submit", :class => "btn" %>     
+   
+ <% end %>
