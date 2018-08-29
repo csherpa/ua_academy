@@ -1,0 +1,8 @@
+<tr id = 'instructor-<%= instructor.id%>'>
+    <td><%= instructor.firstname%></td>
+    <td><%= instructor.lastname%></td>
+    <td><%= instructor.quirk%></td>
+    <td><%= instructor.postion%></td>
+    <td><%= link_to 'Edit', edit_instructor_path(instructor), remote:true %></td> 
+    <td><%= link_to 'Remove', instructor_path(instructor), method: :delete, remote:true, data: { confirm: 'Are you sure' } %></td>
+</tr>

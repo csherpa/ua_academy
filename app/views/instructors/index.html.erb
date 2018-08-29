@@ -1,28 +1,23 @@
-<table class="table table-striped table-dark">
-  <thead class="thead">
-    <tr>
-    <form>
-      <%# <th scope="col">Instructor Id</th> %>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Position</th>
-      <th scope="col">Quirk</th>
-    </form>
-    </tr>
+<h1>Instructors</h1>
+<%= link_to "New Teacher", new_instructor_path, remote: true, id: 'ajaxcall'%>
+<div id='teacher-form' style="display:none;"></div>
+
+<table>
+    <thead>
+        <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Position</th>
+        <th scope="col">Quirk</th>
+        <th colspan='4'></th>
+        </tr>
     </thead>
 
-    <tbody>
-            <form>
+    <tbody id='my_teachers'>
             <tr> 
-                <% @instructors.each do |single_instructor|%>
-                <%# <td> <%= single_instructor.id%>
-                <td class="nav-link" > <%= single_instructor.firstname%></td>
-                <td><%= single_instructor.lastname %></td>
-                <td> <%= single_instructor.postion%></td>
-                <td><%= single_instructor.quirk%></td>
-                <td><%= link_to "Edit", edit_instructor_path(single_instructor) %></td>
-            </tr> 
-            
+                <% @instructors.each do |instructor|%>
+                    <%= render instructor %>
+            </tr>             
             <% end %>
         </form>
     </tbody>
