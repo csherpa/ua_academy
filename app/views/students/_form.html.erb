@@ -1,0 +1,19 @@
+<%= form_for @student, remote: true do |f| %>
+      <div><%= f.label :firstname %></div>
+      <div><%= f.text_field :firstname, id: :student_firstname, placeholder: "Enter First Name" %></div>
+
+      <div><%= f.label :lastname %></div>
+      <div><%= f.text_field :lastname, id: :student_lastname, placeholder: "Enter Last Name" %></div>
+
+      <div><%= f.label :quirk %></div>
+      <div><%= f.text_field :quirk, id: :student_quirk, placeholder: "Enter Quirk" %></div>
+
+      <div><%= f.label :cohort_id %></div>
+      <div><%= f.text_field :cohort_id, id: :student_cohort_id, placeholder: 'Enter the cohort id'%> </div>
+
+      <div><%= f.submit "Submit", :class => "btn" %></div>
+     
+ <% end %> 
+
+
+ 

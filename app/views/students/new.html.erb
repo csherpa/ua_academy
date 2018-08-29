@@ -1,23 +1,5 @@
-<table class="table table-striped">
-<thead class="thead-dark">
-  <tr>
-    <%= form_with model: Student.new do |f| %>
-      <td><%= f.label :firstname %>
-      <%= f.text_field :firstname, placeholder: "Enter First Name"%></td>
+<h1>New Student</h1>
 
-      <td><%= f.label :lastname %>
-      <%= f.text_field :lastname, placeholder: "Enter Last Name" %></td>
+<%= render 'form', student: @student %>
 
-      <td><%= f.label :quirk%>
-      <%= f.text_field :quirk, placeholder: "Enter Quirk" %></td>
-
-      <td><%= f.label :cohort_id %>
-      <%= f.text_field :cohort_id, placeholder: 'Enter the cohort id'%></td>
-
-      <td><%= f.submit "Submit" %></td>
-    <% end %>
-  </tr>  
-     
-</thead>
-</table>
-
+<%= link_to 'Back', students_path %>

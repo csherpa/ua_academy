@@ -1,19 +1,24 @@
+<p id="notice"><%= notice %></p>
 
-<table class="table table-striped table-dark">
-<thead class="thead-dark">
-  <tr>
-    <th>Name</th>
-    <th>Quirk</th>
-    <th>Cohort Id</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><%= @student.firstname %> <%= @student.lastname %><%= @student.quirk %></td>
-    <td>Cohort id: <%= @student.cohort_id %></td>  
-  </tr>
-</tbody>
-</table>
-<%= link_to "Edit", edit_student_path(@student) %>
+<p>
+  <strong>First Name:</strong>
+  <%= @student.firstname %>
+</p>
 
+<p>
+  <strong>Last Name:</strong>
+  <%= @student.lastname %>
+</p>
 
+<p>
+  <strong>Quirk:</strong>
+  <%= @student.quirk %>
+</p>
+
+<p>
+  <strong>Cohort Id:</strong>
+  <%= @student.cohort_id %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

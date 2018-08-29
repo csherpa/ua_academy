@@ -6,10 +6,14 @@ class CohortsController < ApplicationController
     def new
         @cohort = Cohort.new
     end
+
     def create 
         @cohort = Cohort.new(cohort_params)
-        @cohort.save
-        redirect_to '/cohorts'
+        if @cohort.save
+            redirect_to '/cohorts'
+        else
+            render 'new'
+        end
     end
 
     def show
@@ -27,6 +31,12 @@ class CohortsController < ApplicationController
         redirect_to '/cohorts'
     end
     
+    def destroy
+        @cohort = Student.find(params[:id])
+        @cohort.delete
+        redirect_to '/students'
+    end
+
     private
 
     def cohort_params
