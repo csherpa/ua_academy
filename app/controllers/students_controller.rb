@@ -2,8 +2,6 @@ class StudentsController < ApplicationController
 
     # before_action :current_student, only: [:destroy]
     
-    # helper_method :current_student
-
     def index
         @students = Student.all
     end
@@ -24,14 +22,17 @@ class StudentsController < ApplicationController
 
     def edit 
         @student = Student.find(params[:id]) 
+        
     end
-      
+
     def update
         @student = Student.find(params[:id])
         @student.update(student_params)
         redirect_to '/students'
     end
 
+    
+    
     def destroy
         @student = Student.find(params[:id])
         @student.delete

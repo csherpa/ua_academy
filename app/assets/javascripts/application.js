@@ -14,5 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
 let studentdiv;
 let form;

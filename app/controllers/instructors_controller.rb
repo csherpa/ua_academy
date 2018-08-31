@@ -29,7 +29,7 @@ end
 
 def destroy
     @instructor = Instructor.find(params[:id])
-    @instructor.destroy
+    @instructor.delete
     redirect_to '/instructors'
 end
 

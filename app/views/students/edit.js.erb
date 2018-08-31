@@ -1,7 +1,0 @@
-studentdiv = document.getElementById("student<%= student.id %>")
-
-//console log that task that I clicked on 
-console.log("Current task clicked " + studentdiv.innerText)
-
-//Gave up here and had to use JQuery to replace the TR element becuase trs dont like forms inside of them 
-$(studentdiv).replaceWith("<%= j (render 'form') %>");

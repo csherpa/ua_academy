@@ -1,0 +1,13 @@
+<% form_for @course, remote: true do |f|%>
+    <div><%= f.label :title %></div>
+    <div><%= f.text_field :title, id: :course_title, placeholder: 'Enter the tilte'%></div>
+
+    <div><%= f.label :description %></div>
+    <div><%= f.text_field :description, id: :course_description placeholder: 'Enter the description'%></div>
+
+     <div><%= f.label :instructor_id %></div>
+    <div><%= f.text_field :instructor_id, id: :course_instructor_id, placeholder: 'Enter the instructor id'%></div>
+
+     <div><%= f.label :course_id %></div>
+    <div><%= f.text_field :course_id, id: :course_course_id, placeholder: 'Enter the course'%></div>
+<% end %>
