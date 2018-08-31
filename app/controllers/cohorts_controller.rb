@@ -18,7 +18,6 @@ class CohortsController < ApplicationController
 
     def show
         @cohort = Cohort.find(params[:id])
-        # @students = @cohort.students
     end
 
     def edit 
@@ -32,9 +31,9 @@ class CohortsController < ApplicationController
     end
     
     def destroy
-        @cohort = Student.find(params[:id])
+        @cohort = Cohort.find(params[:id])
         @cohort.delete
-        redirect_to '/students'
+        redirect_to '/cohorts'
     end
 
     private
