@@ -1,22 +1,5 @@
-<table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <%= form_with model: Cohort.new do |form| %>
+<h1>Cohorts</h1>
 
-                <td><%= form.label :title%>
-                <%= form.text_field :title, placeholder: "Enter Title"%></td>
+<%= render 'form', cohort: @cohort %>
 
-                <td><%= form.label :description%>
-                <%= form.text_field :description, placeholder: "Enter Description"%></td>
-
-                <td><%= form.label :instructor_id%>
-                <%= form.text_field :instructor_id, placeholder: "Enter "%></td>
-
-                <td><%= form.label :course_id%>
-                <%= form.text_field :course_id, placeholder: "Enter "%></td>
-                
-                <td><%= form.submit 'Submit' %></td>
-            <% end %>
-        </tr>
-    </thead>
-</table>
+<%= link_to 'Back', cohorts_path%>
