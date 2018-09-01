@@ -18,5 +18,6 @@
 
 let studentdiv;
 let instructordiv;
+let coursediv;
 let cohortdiv;
 let form;
