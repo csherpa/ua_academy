@@ -1,14 +1,5 @@
-<table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <%= form_with model: Course.new do |form| %>
-                <td><%= form.label :title %>
-                <%= form.text_field :title, placeholder: "Enter Title Name"%></td>
+<h1>New Course</h1>
 
-                <td><%=form.label :course_id %>
-                <%= form.text_field :course_id, placeholder: 'Enter course Id'%></td>    
-                <td><%= form.submit "Submit"%></td>
-            <% end %>
-        </tr>
-    </thead>
-<table>
+<%= render 'form', course: @course %>
+
+<%= link_to 'Back', courses_path %>
