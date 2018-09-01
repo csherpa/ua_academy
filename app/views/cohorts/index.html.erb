@@ -1,28 +1,23 @@
 <h1>Cohorts</h1>
+
+<%= link_to 'New Cohort', new_cohort_path, remote: true, id: 'ajaxcall' %>
+
+<div id='cohort-form' style='display:none;'>
+</div>
+
 <table>
   <thead>
     <tr>
-    <form>
       <th scope="col">Title</th>
       <th scope="col">Description</th>
-    </form>
     </tr>
   </thead>
 
   <tbody id='my-cohorts'>
-    <tr> 
-      <form>
-        <% @cohorts.each do |single_cohort| %>
-            <td> <%= single_cohort.title %> </td>
-            <td> <%= single_cohort.description %> </td>
-        </tr>
+        <% @cohorts.each do |cohort| %>
+          <%= render cohort %>
         <% end %>
-    </form>
-    </tbody>
+  </tbody>
 </table>
 
-<br>
 
-<td><%= link_to 'New Cohort', new_cohort_path, remote: true, id: 'ajaxcall'%></td>
-
-<div id=></div>

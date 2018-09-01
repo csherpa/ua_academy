@@ -1,0 +1,6 @@
+<tr id = 'cohort-<%= cohort.id %>'></tr>
+    <td><%= cohort.title%></td>
+    <td><%= cohort.description%></td>
+    <td><%= link_to 'Edit', edit_cohort_path(cohort)%></td>
+    <td><%= link_to 'Remove', cohort_path(cohort), method: :delete, remote: true, data: { confirm: 'Are you sure' }%></td>
+</tr>
