@@ -1,5 +1,6 @@
 <tr id= "course-<%= course.id %>">
   <td><%= course.title %></td>
+  <td><%= link_to 'Show', course_path(course)%></td>
   <td><%= link_to 'Edit', edit_course_path(course),remote: true %></td>
   <td><%= link_to 'Remove', course_path(course), method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
 </tr>

@@ -1,7 +1,9 @@
 <tr id= "student-<%= student.id %>">
+  <td><%= student.id %></td>
   <td><%= student.firstname %></td>
   <td><%= student.lastname %></td>
   <td><%= student.quirk %></td>
+  <td><%= link_to 'Show', student_path(student) %>
   <td><%= link_to 'Edit', edit_student_path(student), remote: true %></td>
   <td><%= link_to 'Remove', student_path(student),remote: true, method: :delete,  data: { confirm: 'Are you sure?' } %></td>
 </tr>

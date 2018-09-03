@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 2018_09_01_233419) do
 
   create_table "cohorts", force: :cascade do |t|
     t.string "title"
-    t.string "description"
+    t.date "start_date"
+    t.date "end_date"
     t.integer "instructor_id"
     t.integer "course_id"
     t.datetime "created_at", null: false
@@ -38,12 +39,12 @@ ActiveRecord::Schema.define(version: 2018_09_01_233419) do
 
   create_table "courses", force: :cascade do |t|
     t.string "title"
+    t.integer "hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "instructors", force: :cascade do |t|
-    t.string "image_url"
     t.string "firstname"
     t.string "lastname"
     t.string "postion"
@@ -53,7 +54,6 @@ ActiveRecord::Schema.define(version: 2018_09_01_233419) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "image_url"
     t.string "firstname"
     t.string "lastname"
     t.string "quirk"
