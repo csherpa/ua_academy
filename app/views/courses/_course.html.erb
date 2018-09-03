@@ -1,4 +1,5 @@
 <tr id= "course-<%= course.id %>">
+  <td><%= course.id %></td>
   <td><%= course.title %></td>
   <td><%= link_to 'Show', course_path(course)%></td>
   <td><%= link_to 'Edit', edit_course_path(course),remote: true %></td>
