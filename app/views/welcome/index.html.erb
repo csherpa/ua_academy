@@ -1,0 +1,83 @@
+<div id='main-div'> 
+<% if admin_signed_in? %>
+<div class="container-fluid">
+  <%# <ol class="breadcrumb">
+    <li class="breadcrumb-item active">Dashboard</a></li>
+  </ol> %>
+    <div id="welcome-cards" class="row justify-content-md-center">
+    <div class="col-md-5 mb-3 m-1">
+      <div class="card text-black bg-info o-hidden h-100 ">
+        <img class="card-img-top" src="https://4.bp.blogspot.com/-WC5ovNkH-DM/Wt-_CVG-SuI/AAAAAAAACDs/O_sm1CyQwcw8mTsxyazbVVZO46i03HaFACLcBGAs/s1600/MyHeroAcademiaClass1-A-VERSION-2.png" alt="">
+        <div class="card-body">
+          <div class="card-body-icon">
+            <i class="fa fa-fw fa-university"></i>
+          </div>
+          <div class="mr-5">Students : <%= @student_count %></div>
+        </div>
+        <a class="card-footer text-black clearfix medium z-1" href="<%= students_path %>">
+          <span class="float-left">View Details</span>
+          <span class="float-right">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-5 mb-3 m-1">
+      <div class="card text-black bg-info o-hidden h-100">
+        <img class="card-img-top" src="https://i.ytimg.com/vi/-DOBk1Cd7D0/maxresdefault.jpg" alt="">
+        <div class="card-body">
+          <div class="card-body-icon">
+            <i class="fa fa-fw fa-university"></i>
+          </div>
+          <div class="mr-5">Instructors : <%= @instructor_count %></div>
+        </div>
+        <a class="card-footer text-black clearfix medium z-1" href="<%= instructors_path %>">
+          <span class="float-left">View Details</span>
+          <span class="float-right">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-5 mb-3 m-1">
+      <div class="card text-black bg-info o-hidden h-100">
+        <img class="card-img-top" src="https://vignette.wikia.nocookie.net/my-hero-academia-fanon/images/9/94/AcademiaClassroom.jpg/revision/latest?cb=20180726122706" alt="">
+        <div class="card-body">
+          <div class="card-body-icon">
+            <i class="fa fa-fw fa-users"></i>
+          </div>
+          <div class="mr-5">Cohorts : <%= @cohort_count %></div>
+        </div>
+        <a class="card-footer text-black clearfix medium z-1" href="<%= cohorts_path %>">
+          <span class="float-left">View Details</span>
+          <span class="float-right">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-5 mb-3 m-1">
+      <div class="card text-black bg-info o-hidden h-100">
+        <img class="card-img-top" src="https://vignette.wikia.nocookie.net/bokunoheroacademia/images/a/a7/U.A._Main_Building.png/revision/latest?cb=20160508230412" alt="">
+        <div class="card-body">
+          <div class="card-body-icon">
+            <i class="fa fa-fw fa-user-circle"></i>
+          </div>
+          <div class="mr-5">Course: <%= @course_count %></div>
+        </div>
+        <a class="card-footer text-black clearfix medium z-1" href="<%= courses_path %>">
+          <span class="float-left">View Details</span>
+          <span class="float-right">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+ 

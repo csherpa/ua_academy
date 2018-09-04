@@ -1,13 +1,19 @@
-<div>
-    <strong>Title</strong>
-    <%= @cohort.title%>
+<div class='show'>
+<h1><%= @cohort.title %></h1>
+
+<p>
+   <strong>Course:</strong> <%= @cohort.course.title%><br />
+   <strong>Teacher:</strong>  <%= @cohort.instructor.firstname %> <%= @cohort.instructor.lastname %> <br/>
+   <strong>Start date: </strong> <%= @cohort.start_date.strftime("%B %d, %Y")%><br />
+   <strong>End Date:</strong> <%= @cohort.end_date.strftime("%B %d, %Y")%><br /> 
+   <strong>Students:</strong>
+   <ul>
+        <% @students.each do |student| %> 
+            <li><%= student.full_name%></li>
+        <%end%>
+    </ul>       
+</p>
+
+<%= link_to 'Edit', edit_cohort_path(@cohort),class: "btn btn-outline-secondary"%> |
+<%= link_to 'Back', cohorts_path,class: "btn btn-outline-warning"%>
 </div>
-
-<div>
-    <strong>Start Date</strong>
-    <%= @cohort.start_date%>
-</div>
-
-
-<%= link_to 'Edit', edit_cohort_path(@cohort)%> |
-<%= link_to 'Back', cohorts_path%>

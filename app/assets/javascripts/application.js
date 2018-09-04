@@ -11,13 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.easing
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 
-let studentdiv;
+let form;
 let instructordiv;
 let coursediv;
-let cohortdiv;
-let form;
+let startdiv;
+let studentdiv;
+
+

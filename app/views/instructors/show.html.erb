@@ -1,22 +1,30 @@
+<div class="show">
+<h1><%= @instructor.firstname%> <%= @instructor.lastname %></h1>
+
 <div>
-    <strong>First Name</strong>
+    <strong>First Name:</strong>
     <%= @instructor.firstname%>
 </div>
 
 <div>
-    <strong>Last Name</strong>
-    <%= @instructor.firstname%>
+    <strong>Last Name:</strong>
+    <%= @instructor.lastname%>
 </div>
 
 <div>
-    <strong>Position</strong>
+    <strong>Position:</strong>
     <%= @instructor.postion%>
 </div>
 
 <div>
-    <strong>Quirk</strong>
+    <strong>Quirk:</strong>
     <%= @instructor.quirk%>
 </div>
-
-<%= link_to 'Edit', edit_instructor_path(@instructor)%> |
-<%= link_to 'Back', instructors_path%>
+<div>   
+    <strong>Cohort:</strong><% @allCohort.each do |cohort|%>
+        <%= cohort.title%> |
+    <% end %>
+</div>
+<%= link_to 'Edit', edit_instructor_path(@instructor),class: "btn btn-outline-secondary"%> |
+<%= link_to 'Back', instructors_path,class: "btn btn-outline-warning"%>
+</div>
