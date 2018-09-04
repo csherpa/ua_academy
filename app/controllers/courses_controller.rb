@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+    before_action :authenticate_admin!
     def index
         @courses = Course.all
     end
@@ -9,13 +10,14 @@ class CoursesController < ApplicationController
 
     def create
         @course = Course.new(course_params)
-        @course.save
-        redirect_to '/courses'
+        if @course.save
+            redirect_to '/courses'
+        end
     end
 
     def show 
         @course = Course.find(params[:id])
-        # @cohorts = @course.cohorts
+        @cohorts = Course.find(params[:id]).cohorts
     end  
 
     def edit 
@@ -24,8 +26,11 @@ class CoursesController < ApplicationController
       
     def update
         @course = Course.find(params[:id])
-        @course.update(course_params)
-        redirect_to '/courses'
+        if @course.update(course_params)
+            redirect_to '/courses'
+        else
+            render 'edit'
+        end
     end
 
     def destroy

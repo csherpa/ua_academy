@@ -1,13 +1,15 @@
 class StudentsController < ApplicationController
 
     # before_action :current_student, only: [:destroy]
-    
+    before_action :authenticate_admin!
+
     def index
         @students = Student.all
     end
 
     def new
         @student = Student.new
+
     end
      
     def show
@@ -16,8 +18,11 @@ class StudentsController < ApplicationController
 
     def create 
         @student = Student.new(student_params)
-        @student.save 
-        redirect_to '/students' 
+        if @student.save 
+            redirect_to '/students' 
+        else 
+            render 'new'
+        end
     end
 
     def edit 
@@ -27,12 +32,13 @@ class StudentsController < ApplicationController
 
     def update
         @student = Student.find(params[:id])
-        @student.update(student_params)
-        redirect_to '/students'
+        if @student.update(student_params)
+            redirect_to '/students'
+        else 
+            render 'edit'
+        end
     end
 
-    
-    
     def destroy
         @student = Student.find(params[:id])
         @student.delete

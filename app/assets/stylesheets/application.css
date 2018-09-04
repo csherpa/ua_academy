@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    /* height: 100%; */
+    /* width: 100%; */
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 170%;
+    width: 230px;
+    position: absolute;
+    z-index: 1;
+    top: 1;
+    left: 0;
+    background-color: rgb(64, 64, 64);
+    /* overflow-x: hidden; */
+    padding-top: 50px;
+    list-style: none;
+}
+
+.sidenav a {
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(4, 195, 195);
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#main-div{
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+#student{
+    width: 70%;
+    margin-left: 19%;
+    margin-top: 99px;
+}
+
+#teacher{
+    width: 70%;
+    margin-left: 19%;
+    margin-top: 99px;
+}
+
+#log-in{
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 50%    
+}
+
+#cohort{
+    width: 70%;
+    margin-left: 19%;
+    margin-top: 99px;
+}
+#course{
+    width: 70%;
+    margin-left: 19%;
+    margin-top: 99px;
+}
+#logo{
+    margin-left: 25px;
+}
+.show{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 100px;
+}
+
+.edit{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 100px;
+}
+.add{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 100px;
+}
+
+
+ .container-fluid{
+    position: absolute;
+    /* width: 100%; */
+    /* padding-right: 25px;
+    padding-left: 15px; */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    margin-left: 220px;
+    margin-top: 30px;
+ }
+

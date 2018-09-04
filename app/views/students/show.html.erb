@@ -1,23 +1,32 @@
+<div class= 'show'>
+<h1><%= @student.full_name%></h1>
 
-<p>
+<div>
   <strong>First Name:</strong>
   <%= @student.firstname %>
-</p>
+</div>
 
-<p>
+<div>
   <strong>Last Name:</strong>
   <%= @student.lastname %>
-</p>
+</div>
 
-<p>
+<div>
   <strong>Quirk:</strong>
   <%= @student.quirk %>
-</p>
+</div>
 
-<p>
+<div>
+  <strong>Cohort:</strong>
+  <%= @student.cohort.title %>
+</div>
+
+<div>
   <strong>Cohort Id:</strong>
   <%= @student.cohort_id %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-outline-secondary" %> |
+<%= link_to 'Back', students_path,class: "btn btn-outline-warning" %>
+
+</div>

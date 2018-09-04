@@ -1,7 +1,15 @@
+<div class='show'>
+<h1><%= @course.title%></h1>
 <p>
-  <strong>Title:</strong>
-  <%= @course.title%>
+  <strong>Title: </strong><%= @course.title%><br/>
+  <strong>Hours: </strong><%= @course.hours%> 
 </p>
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<p>
+  <strong>Cohorts: </strong>
+  <%= @cohorts.each do |single_cohort|%>
+      <%= single_cohort.title %>|
+  <% end %>
+</p>
+<%= link_to 'Edit', edit_course_path(@course),class: "btn btn-outline-secondary" %> |
+<%= link_to 'Back', courses_path,class: "btn btn-outline-warning" %>
+</div>

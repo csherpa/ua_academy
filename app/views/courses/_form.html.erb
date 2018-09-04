@@ -3,5 +3,8 @@
     <div><%= f.label :title%></div>
     <div><%= f.text_field :title, id: :course_title, placeholder: 'Enter Title'%></div>
 
-    <div><%= f.submit "Submit", :class => "btn" %></div>
+    <div><%= f.label :hours%></div>
+    <div><%= f.text_field :hours, id: :course_hours, placeholder: 'Enter Hours'%></div>
+
+    <div><%= f.submit "Submit", :class => "btn btn-outline-success" %></div>
  <% end %>

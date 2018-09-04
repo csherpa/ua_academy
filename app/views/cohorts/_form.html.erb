@@ -1,9 +1,12 @@
-<% form_for @cohort, remote: true do |f|%>
+<%= form_for @cohort, remote: true do |f|%>
     <div><%= f.label :title %></div>
     <div><%= f.text_field :title, id: :cohort_title, placeholder: 'Enter the tilte'%></div>
 
-    <div><%= f.label :description %></div>
-    <div><%= f.text_field :description, id: :cohort_description, placeholder: 'Enter the description'%></div>
+    <div><%= f.label :start_date %></div>
+    <div><%= f.text_field :start_date, id: :cohort_start_date, placeholder: 'Enter the Start Date'%></div>
+
+    <div><%= f.label :end_date %></div>
+    <div><%= f.text_field :end_date, id: :cohort_end_start, placeholder: 'Enter the End Start'%></div>
 
     <div><%= f.label :instructor_id %></div>
     <div><%= f.text_field :instructor_id, id: :cohort_instructor_id, placeholder: 'Enter the instructor id'%></div>
@@ -11,5 +14,5 @@
      <div><%= f.label :course_id %></div>
     <div><%= f.text_field :course_id, id: :cohort_course_id, placeholder: 'Enter the course'%></div>
 
-    <div><%= f.submit "Submit", :class => 'btn'%></div>
+    <div><%= f.submit "Submit", :class => 'btn btn-outline-success'%></div>
 <% end %>
