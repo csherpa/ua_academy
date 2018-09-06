@@ -17,10 +17,10 @@
 //= require turbolinks
 //= require_tree .
 
-let form;
-let instructordiv;
-let coursediv;
-let startdiv;
-let studentdiv;
+var form;
+var instructordiv;
+var coursediv;
+var startdiv;
+var studentdiv;
 
 
