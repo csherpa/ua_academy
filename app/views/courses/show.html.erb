@@ -6,8 +6,8 @@
 </p>
 <p>
   <strong>Cohorts: </strong>
-  <%= @cohorts.each do |single_cohort|%>
-      <%= single_cohort.title %>|
+  <%= @cohorts.each do |cohort|%>
+      <%=cohort.title%>|
   <% end %>
 </p>
 <%= link_to 'Edit', edit_course_path(@course),class: "btn btn-outline-secondary" %> |
