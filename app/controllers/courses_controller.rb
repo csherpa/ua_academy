@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
 
     def show 
         @course = Course.find(params[:id])
-        @cohorts = Course.find(params[:id]).cohorts
+        @cohorts = @course.cohorts
     end  
 
     def edit 

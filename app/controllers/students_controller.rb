@@ -1,6 +1,5 @@
 class StudentsController < ApplicationController
 
-    # before_action :current_student, only: [:destroy]
     before_action :authenticate_admin!
 
     def index
@@ -51,6 +50,6 @@ class StudentsController < ApplicationController
     # end
 
     def student_params
-        params.require(:student).permit(:image_url, :firstname, :lastname, :quirk, :cohort_id)
+        params.require(:student).permit(:firstname, :lastname, :quirk, :cohort_id, :age)
     end
 end
