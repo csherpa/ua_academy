@@ -13,3 +13,11 @@
 ### Login
 #### Email: ua@gmail.com
 #### Password : 123456
+
+## Built With:
+* Ruby
+* Ruby on rails
+* ActiveRecord
+* PostgreSQL
+* Deploying to Heroku
+
