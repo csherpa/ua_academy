@@ -1,24 +1,15 @@
-# README
+# UA Academy Admin Panel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Goal
+#### Fictitious school where the administrator can create users and complete common administrative tasks.
 
-Things you may want to cover:
+## Summary
+#### This website is designed for administrators of a fictitious school, where all users have the same accesss and are able to add, edit, view, and delete courses, cohorts, instructors, and students.
 
-* Ruby version
+## Deployment
 
-* System dependencies
+#### Deployed Heroku link https://obscure-shelf-75373.herokuapp.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Login
+#### Email: ua@gmail.com
+#### Password : 123456
