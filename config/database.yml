@@ -24,6 +24,6 @@ test:
 production:
   <<: *default
   database: db/production
-  username: <%= ENV['DATABASE_USER'] %>
+  username: ua_academy
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
